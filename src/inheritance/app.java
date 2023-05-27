@@ -1,40 +1,47 @@
 package inheritance;
+import java.util.Scanner;
 
 public class app {
 
 	public static void main(String[] args) {
+	long empid;
+	String empName; 
+	String empAddress;
+	long empPhone; 
+	double empbSalary; 
+
+	Scanner sc = new Scanner(System.in);
+
+	System.out.println("Enter employee id:");
+	empid = sc.nextLong();
+
+	System.out.println("Enter employee name:");
+	empName = sc.next();
+
+	System.out.println("Enter employee address:");
+	empAddress = sc.next();
+	sc.nextLine();
+
+	System.out.println("Enter employee phone:");
+	empPhone = sc.nextLong();
 		
-		/* 
-		Employee emp = new Employee(64606, "Bernard", "LasVegas", 7025385);
-	    emp.display_emp_salary();;
+	System.out.println("Enter employee salary:");
+	empbSalary = sc.nextDouble();
+
+
+	/*
+	Employee e1 = new Employee(empid, empName, empAddress, empPhone, empbSalary);
+	e1.display_emp_salary(empbSalary);
+ *
+	 */
 	
-		Manager mgr = new Manager(72322, "Brian", "California", 5555555);
-		mgr.display_mgr_salary();
-		 
-		Trainee tr = new Trainee(23553, "Nathan", "Texas", 1113333);
-		tr.display_trainee_salary();
-		*/
+	 
+	Manager m1 = new Manager(empid, empName, empAddress, empPhone, empbSalary);
+	m1.display_mgr_salary(empbSalary);
 
+	Trainee t1 = new Trainee(empid, empName, empAddress, empPhone, empbSalary);
+	t1.display_trainee_salary(empbSalary);
 
-		EmployeeFunctions e = new EmployeeFunctions();
-		e.insertEmployee();
-		e.displayEmployee();
-		
-
-
-		ManagerFunctions m = new ManagerFunctions();
-		m.insertManager();
-		m.displayManager();
-		
-		//m.deleteEmployee();
-		//m.displayEmployee();
-
-		//e.deleteEmployee();
-		//m.deleteManager();
-
-		//e.displayEmployee();
-		//m.displayManager();
 
 	}
-
 }

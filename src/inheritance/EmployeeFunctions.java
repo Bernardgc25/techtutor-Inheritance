@@ -1,10 +1,11 @@
 package inheritance;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class EmployeeFunctions {
-    private Employee employeearr[];
-    private Scanner sc; 
+   // private Employee employeearr[];
+   // private Scanner sc; 
 
+	/* 
     public EmployeeFunctions()
 	{
 		sc=new Scanner(System.in);
@@ -63,5 +64,5 @@ public class EmployeeFunctions {
 			}
 		}
 	}
-	
+	*/	
 }

@@ -6,18 +6,22 @@ public class Employee {
     String employeeAddress;
     long employeePhone; 
     double basicSalary; 
-    double specialAllowance = 250.80; 
+	double specialAllowance = 250.80; 
     double Hra = 1000.50;
     
-    public Employee(){
+  
+
+	public Employee(){
 
     }
-    Employee(int id, String Name, String address, long phone){
+    Employee(long id, String Name, String address, long phone, double Salary){
         this.employeeid = id; 
         this.employeeName = Name;
         this.employeeAddress = address;
         this.employeePhone = phone; 
+		this.basicSalary = Salary; 
     }
+
 	public long getEmployeeid() {
 		return employeeid;
 	}
@@ -51,30 +55,37 @@ public class Employee {
 	public double getSpecialAllowance() {
 		return specialAllowance;
 	}
-
 	public double getHra() {
 		return Hra;
 	}
-
-
 	
-	public double employeeSalary(){
-	        double sA = specialAllowance / 100;
-	        double bSA = basicSalary * sA;
-	        double bSAplusbsA = bSA + sA; 
+	public double employeeSalary(double basicSalary){
+	  
+		double bSA = getBasicSalary() * getSpecialAllowance();
+		bSA = bSA/10000; 
+		 
+		double bSAhrA = getBasicSalary() * getHra();
+		bSAhrA = bSAhrA/10000;
 
-	        double hrA_hundred = Hra / 100; 
-	        double bSA_hrA = basicSalary * hrA_hundred;
-
-	        double emp_salary = bSAplusbsA + bSA_hrA;
-
-	        return emp_salary;
-
+		return getBasicSalary() + bSA + bSAhrA;
 	}
 
-	public void display_emp_salary(){
-	        System.out.println(employeeSalary());
+	/* 
+	public void display_emp_info(){
+		System.out.println(employeeid);
+		System.out.println(employeeName);
+		System.out.println(employeeAddress);
+		System.out.println(employeePhone);
 	}
+	*/
+	
+	 
+	public void display_emp_salary(double basicSalary){
 
+		double tmp = employeeSalary(basicSalary);
+		System.out.println("Total employee salary:" + tmp);
+	
+	}
+	
 
 }

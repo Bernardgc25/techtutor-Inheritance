@@ -1,11 +1,12 @@
 package inheritance;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class ManagerFunctions extends EmployeeFunctions {   
-    private Manager managerarr[];
-    private Scanner sc; 
-    
+    //private Manager managerarr[];
+    //private Scanner sc; 
+     
+	/* 
     public ManagerFunctions()
 	{
 		sc = new Scanner(System.in);
@@ -31,7 +32,7 @@ public class ManagerFunctions extends EmployeeFunctions {
 
 
 			System.out.println("Enter salary");
-            m.setManager_salary(sc.nextDouble());
+            m.setBasicSalary(sc.nextDouble());
         }
 	}
 
@@ -55,11 +56,12 @@ public class ManagerFunctions extends EmployeeFunctions {
 		{
 			if(!(m1==null))
 			{
-			System.out.println("Manager id is "+m1.getManagerid());
-			System.out.println("Manager name is "+m1.getManagerName());
+			System.out.println("Manager id is "+m1.getEmployeeid());
+			System.out.println("Manager name is "+m1.getEmployeeName());
             System.out.print("Manager salary is");
 			m1.display_mgr_salary();
             }
 		}
 	}
+	*/
 }
