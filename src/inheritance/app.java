@@ -29,19 +29,16 @@ public class app {
 	empbSalary = sc.nextDouble();
 
 
-	/*
+	
 	Employee e1 = new Employee(empid, empName, empAddress, empPhone, empbSalary);
 	e1.display_emp_salary(empbSalary);
- *
-	 */
-	
-	 
+ 
 	Manager m1 = new Manager(empid, empName, empAddress, empPhone, empbSalary);
 	m1.display_mgr_salary(empbSalary);
 
 	Trainee t1 = new Trainee(empid, empName, empAddress, empPhone, empbSalary);
 	t1.display_trainee_salary(empbSalary);
 
-
+	
 	}
 }
