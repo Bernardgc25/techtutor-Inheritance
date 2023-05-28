@@ -2,14 +2,14 @@ package inheritance;
 import java.util.Scanner;
 
 public class EmployeeFunctions extends Employee {
-     	 
+
         private Employee employeearray[];//this is Student type array
         private Scanner sc;
         
         public EmployeeFunctions()
         {
             sc=new Scanner(System.in);
-            System.out.print("Enter no of Employees to add:");
+            System.out.print("Enter no of Employees to add: ");
             int noofemployees=sc.nextInt();
             System.out.print("\n");
             employeearray=new Employee[noofemployees];
@@ -23,30 +23,30 @@ public class EmployeeFunctions extends Employee {
                 System.out.flush();  
                 
                 Employee e=new Employee();
-                  
-                System.out.print("Enter Employee Type(manager/trainee):");
+                
+                System.out.print("Enter Employee Type(manager/trainee): ");
                 e.setEmployee_type(sc.next());
                 //System.out.print("\n");
-                  
+            
                 if(e.employee_type.equals("manager")){
                     //get info
-                    System.out.print("Enter Employee id:");
+                    System.out.print("Enter Employee id: ");
                     e.setEmployeeid(sc.nextLong());
                     //System.out.print("\n");
                     
-                    System.out.print("Enter Employee Name:");
+                    System.out.print("Enter Employee Name: ");
                     e.setEmployeeName(sc.next());
                     //System.out.print("\n");
                     
-                    System.out.print("Enter employee address:");
+                    System.out.print("Enter employee address: ");
                     e.setEmployeeAddress(sc.next());
                     sc.nextLine();
                     //System.out.print("\n");
                     
-                    System.out.print("Enter employee phone:");
+                    System.out.print("Enter employee phone: ");
                     e.setEmployeePhone(sc.nextLong());
                     //System.out.print("\n");
-                   
+            
                     System.out.print("Enter employee salary:");
                     e.setBasicSalary(sc.nextDouble());
                    // System.out.print("\n");
@@ -60,16 +60,16 @@ public class EmployeeFunctions extends Employee {
                 }
                 else if(e.employee_type.equals("trainee")){
                     //get info 
-                    System.out.print("Enter Employee id:");
+                    System.out.print("Enter Employee id: ");
                     e.setEmployeeid(sc.nextLong());
-                    System.out.print("Enter Employee Name:");
+                    System.out.print("Enter Employee Name: ");
                     e.setEmployeeName(sc.next());
-                    System.out.print("Enter employee address:");
+                    System.out.print("Enter employee address: ");
                     e.setEmployeeAddress(sc.next());
                     sc.nextLine();
-                    System.out.print("Enter employee phone:");
+                    System.out.print("Enter employee phone: ");
                     e.setEmployeePhone(sc.nextLong());
-                    System.out.print("Enter employee salary:");
+                    System.out.print("Enter employee salary: ");
                     e.setBasicSalary(sc.nextDouble());
     
                     Trainee t = new Trainee(e.getEmployeeid(), e.getEmployeeName(), e.getEmployeeAddress(), e.getEmployeePhone(), e.getBasicSalary());
@@ -96,7 +96,6 @@ public class EmployeeFunctions extends Employee {
             
         }
         
-         
         public void displayHeader(){
             System.out.printf("%-10s   %-10s  %n", "Employee id",  "Employee Name"); 
         }

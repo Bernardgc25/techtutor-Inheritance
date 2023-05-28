@@ -10,11 +10,6 @@ public class Employee {
 	double specialAllowance = 250.80; 
     double Hra = 1000.50;
 
-	//Manager manager = new Manager(); 
-	//Trainee trainee = new Trainee(); 
-    
-  
-
 	public Employee(){
 
     }
@@ -71,16 +66,16 @@ public class Employee {
 	}
 	
 	public double employeeSalary(double basicSalary){
-	  
+
 		double bSA = getBasicSalary() * getSpecialAllowance();
 		bSA = bSA/10000; 
-		 
+
 		double bSAhrA = getBasicSalary() * getHra();
 		bSAhrA = bSAhrA/10000;
 
 		return getBasicSalary() + bSA + bSAhrA;
 	}
-	 
+
 	public void display_emp_salary(double basicSalary){
 
 		double tmp = employeeSalary(basicSalary);
