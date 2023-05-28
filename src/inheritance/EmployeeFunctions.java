@@ -9,8 +9,9 @@ public class EmployeeFunctions extends Employee {
         public EmployeeFunctions()
         {
             sc=new Scanner(System.in);
-            System.out.println("Enter no of Employees to add");
+            System.out.print("Enter no of Employees to add:");
             int noofemployees=sc.nextInt();
+            System.out.print("\n");
             employeearray=new Employee[noofemployees];
             
         }
@@ -23,59 +24,65 @@ public class EmployeeFunctions extends Employee {
                 
                 Employee e=new Employee();
                   
-                System.out.println("Enter Employee Type(manager/trainee)");
+                System.out.print("Enter Employee Type(manager/trainee):");
                 e.setEmployee_type(sc.next());
+                //System.out.print("\n");
                   
                 if(e.employee_type.equals("manager")){
                     //get info
-                    System.out.println("Enter Employee id ");
+                    System.out.print("Enter Employee id:");
                     e.setEmployeeid(sc.nextLong());
-                    System.out.println("Enter Employee Name");
+                    //System.out.print("\n");
+                    
+                    System.out.print("Enter Employee Name:");
                     e.setEmployeeName(sc.next());
-                    System.out.println("Enter employee address:");
+                    //System.out.print("\n");
+                    
+                    System.out.print("Enter employee address:");
                     e.setEmployeeAddress(sc.next());
                     sc.nextLine();
-                    System.out.println("Enter employee phone:");
-                    e.setEmployeePhone(sc.nextLong());
-                    System.out.println("Enter employee salary:");
-                    e.setBasicSalary(sc.nextDouble());
+                    //System.out.print("\n");
                     
+                    System.out.print("Enter employee phone:");
+                    e.setEmployeePhone(sc.nextLong());
+                    //System.out.print("\n");
+                   
+                    System.out.print("Enter employee salary:");
+                    e.setBasicSalary(sc.nextDouble());
+                   // System.out.print("\n");
+
                     Manager m = new Manager(e.getEmployeeid(), e.getEmployeeName(), e.getEmployeeAddress(), e.getEmployeePhone(), e.getBasicSalary());	
-                  
                     //add manager object to Employee array 
                     employeearray[index] = m;
                     m.display_mgr_salary(m.getBasicSalary());
-               
+                    System.out.print("\n");
+
                 }
                 else if(e.employee_type.equals("trainee")){
                     //get info 
-                    System.out.println("Enter Employee id ");
+                    System.out.print("Enter Employee id:");
                     e.setEmployeeid(sc.nextLong());
-                    System.out.println("Enter Employee Name");
+                    System.out.print("Enter Employee Name:");
                     e.setEmployeeName(sc.next());
-                    System.out.println("Enter employee address:");
+                    System.out.print("Enter employee address:");
                     e.setEmployeeAddress(sc.next());
                     sc.nextLine();
-                    System.out.println("Enter employee phone:");
+                    System.out.print("Enter employee phone:");
                     e.setEmployeePhone(sc.nextLong());
-                    System.out.println("Enter employee salary:");
+                    System.out.print("Enter employee salary:");
                     e.setBasicSalary(sc.nextDouble());
     
                     Trainee t = new Trainee(e.getEmployeeid(), e.getEmployeeName(), e.getEmployeeAddress(), e.getEmployeePhone(), e.getBasicSalary());
                     //add trainee object to employee array 
                     employeearray[index] = t; 
                     t.display_trainee_salary(t.getBasicSalary());
-           
+                    System.out.print("\n");
                 }
                 
-                
-    
-            }
-            
+            }    
         }
-        /*     
-        public void deleteEmployee()
-        {
+    
+        public void deleteEmployee(){
             System.out.println("Enter Employee id which want to delete ");
             int deletestudent=sc.nextInt();
     
@@ -88,7 +95,7 @@ public class EmployeeFunctions extends Employee {
             }
             
         }
-        */   
+        
          
         public void displayHeader(){
             System.out.printf("%-10s   %-10s  %n", "Employee id",  "Employee Name"); 
@@ -99,26 +106,8 @@ public class EmployeeFunctions extends Employee {
             {
                 if(!(e1==null))
                 {
-           
-                
-                //System.out.println("Employee id     Employee Name");
-                
-               
                 System.out.printf("%-10s    %-10s  %n", e1.getEmployeeid(),  e1.getEmployeeName()); 
-                //System.out.printf("%d", e1.getEmployeeid());
-                //System.out.printf("%20s %n", e1.getEmployeeName());
-                //System.out.print("\n");
-                
-                //System.out.print(e1.getEmployeeid());
-                //System.out.print(e1.getEmployeeName());
-                
-                
-                //System.out.println("Employee id is "+e1.getEmployeeid());
-                //System.out.println("Employee name is "+e1.getEmployeeName());
-                //System.out.println("Employee Salary is ");
-                    
                 }
             }
         }
-         	
     }
