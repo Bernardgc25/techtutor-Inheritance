@@ -18,7 +18,8 @@ public class EmployeeFunctions extends Employee {
         {
             for(int index=0;index<employeearray.length;index++)
             {
-              
+                //System.out.print("\033[H\033[2J");  
+                System.out.flush();  
                 
                 Employee e=new Employee();
                   
@@ -89,16 +90,33 @@ public class EmployeeFunctions extends Employee {
         }
         */   
          
-        public void displayEmployee()
+        public void displayHeader(){
+            System.out.printf("%-10s   %-10s  %n", "Employee id",  "Employee Name"); 
+        }
+        public void displayEmployeeInfo()
         {
             for(Employee e1:employeearray)
             {
                 if(!(e1==null))
                 {
-                System.out.println("Employee id is "+e1.getEmployeeid());
-                System.out.println("Employee name is "+e1.getEmployeeName());
-                //System.out.println("Employee Salary is ");
+           
                 
+                //System.out.println("Employee id     Employee Name");
+                
+               
+                System.out.printf("%-10s    %-10s  %n", e1.getEmployeeid(),  e1.getEmployeeName()); 
+                //System.out.printf("%d", e1.getEmployeeid());
+                //System.out.printf("%20s %n", e1.getEmployeeName());
+                //System.out.print("\n");
+                
+                //System.out.print(e1.getEmployeeid());
+                //System.out.print(e1.getEmployeeName());
+                
+                
+                //System.out.println("Employee id is "+e1.getEmployeeid());
+                //System.out.println("Employee name is "+e1.getEmployeeName());
+                //System.out.println("Employee Salary is ");
+                    
                 }
             }
         }
