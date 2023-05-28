@@ -23,13 +23,11 @@ public class Trainee extends Employee {
 		return getTrainee_salary() + empS; 
 	}
 
+	
 	public void display_trainee_salary(double basicSalary){
 		
 		double tmp = traineeSalary(basicSalary);
 		System.out.println("Total trainee salary:" + tmp);	
 	}
-
-		
-	
 
 }

@@ -7,6 +7,9 @@ public class Manager extends Employee {
 		return manager_salary;
 	}
 
+	public Manager(){
+		
+	}
 
 	public Manager(long id, String Name, String address, long phone, double Salary) {
 		//invoke parent class constructor(employee class)

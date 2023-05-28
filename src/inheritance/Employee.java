@@ -1,6 +1,7 @@
 package inheritance;
 
 public class Employee {
+	String employee_type;
 	long employeeid;
     String employeeName; 
     String employeeAddress;
@@ -8,13 +9,16 @@ public class Employee {
     double basicSalary; 
 	double specialAllowance = 250.80; 
     double Hra = 1000.50;
+
+	//Manager manager = new Manager(); 
+	//Trainee trainee = new Trainee(); 
     
   
 
 	public Employee(){
 
     }
-    Employee(long id, String Name, String address, long phone, double Salary){
+    public Employee(long id, String Name, String address, long phone, double Salary){
         this.employeeid = id; 
         this.employeeName = Name;
         this.employeeAddress = address;
@@ -22,6 +26,13 @@ public class Employee {
 		this.basicSalary = Salary; 
     }
 
+		
+	public String getEmployee_type() {
+		return employee_type;
+	}
+	public void setEmployee_type(String employee_type) {
+		this.employee_type = employee_type;
+	}
 	public long getEmployeeid() {
 		return employeeid;
 	}
@@ -69,16 +80,6 @@ public class Employee {
 
 		return getBasicSalary() + bSA + bSAhrA;
 	}
-
-	/* 
-	public void display_emp_info(){
-		System.out.println(employeeid);
-		System.out.println(employeeName);
-		System.out.println(employeeAddress);
-		System.out.println(employeePhone);
-	}
-	*/
-	
 	 
 	public void display_emp_salary(double basicSalary){
 
@@ -87,5 +88,5 @@ public class Employee {
 	
 	}
 	
-
 }
+
